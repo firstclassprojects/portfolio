@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#navbar{
+    display: flex;
+    position: sticky;
+    top: 0;
+    padding: 34px 34px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('bg5.jpeg')
+     no-repeat center center/cover;
+    height: 100%;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.8;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home h2{
+    color: white;
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* About Section */
+#about{
+    margin-top: 64px;
+    display: flex;
+}
+#about::before{
+    content: "";
+    position: absolute;    
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: -1;
+    opacity: .89;
+    background: url('about1.jpg') no-repeat center center/cover;
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    padding: 178px;
+}
+#about h1{
+    color: black;
+    font-size: 50px;
+    font-family: 'Bree Serif', serif;
+    margin-top: 200px;
+    text-align: center;
+}
+#about h2{
+    color: black;
+    font-size: 50px;
+    font-family: 'Bree Serif', serif;
+    width: 90%;
+    margin-top: 12px;
+}
+/* Services Section */
+#services{
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 200px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services h1{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+}
+
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services-container{
+    margin-top: 0px;
+}
+
+#services-container::before{
+    content: "";
+    position: absolute;  
+    left: 0;  
+    width: 100%;
+    height: 1000px;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('services.jpg') no-repeat center center/cover;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+}  
+/* Contact Section */
+#contact{
+    z-index: -1;
+    position: relative;
+    margin-top: 69px;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 660px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('contact.jpg') no-repeat center center/cover;
+
+}
+
+#contact h1{
+    padding-top: 10px;
+}
+
+#contact-box{
+    display: flex;
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    margin-top: 18px;
+}
+
+/* Utility Classes */
+
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    /* Navigation */
+#navbar {
+    flex-direction: column;
+}
+
+#navbar ul li a{
+    font-size: 1rem;
+    padding: 0px 10px;
+    padding-bottom: 8px;
+}
+/* Home section */
+#home{
+    height: 370px; 
+    padding: 3px 28px;
+}
+
+#home h1{
+    color: black;
+    font-size: 30px;
+}
+
+#home h2{
+    color: black;
+    font-size: 22px;
+}
+
+#home::before{
+    height: 100vh; 
+}
+
+#home p{
+    font-size: 13px;
+}
+
+/* Services section  */
+#services{
+    flex-direction: column;
+    display: flex;
+}
+
+#services-container{
+    margin-top: 75px;
+}
+
+#services .box h2{
+    font-size: 30px;
+    margin-left: 2em;
+}
+
+#services .box { 
+    padding: 14px;
+    margin: 2px 0px; 
+    margin-bottom: 20px;
+}
+
+#services-container::before{
+    height: 1345px;
+    opacity: 1;
+}
+
+/* About section */
+#about::before{
+    height: 117.3vh;
+}
+
+#about h1{
+    font-size: 40px;
+    margin-top: 100px;
+}
+#about h2{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contact us section */
+#contact-box form{
+    width:80%;
+}
+
+#contact::before{
+    height: 100vh;
+}
+
+#contact{
+    margin-top: 0px;
+}
+
+#contact h1{
+    padding-top: 0px;
+}
+/* Footer */
+footer{
+    padding: 9px 0px;
+    margin-top: 0px;
+}
+/* Utility classes */
+.h-primary{
+    font-size:26px;
+}
+.btn{
+    font-size: 13px;
+    padding: 4px 8px;
+}
+}
+
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#about">About</a></li>
+            <li class="item"><a href="#services">Services</a></li>
+            <li class="item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Hi, I am Rishiraj Sharma</h1>
+        <h2>And I am a Front End Developer</h2>
+    </section>
+
+    <section id="services-container">        
+        <h1 class="h-primary center">Services And Skills</h1>
+        <div id="services">            
+            <div class="box">
+                <img src="english.jpg" alt="">
+                <h2 class="h-secondary">English Fluency</h1>
+                <p class="center">I am very good at english as i have studied at Hogwards 
+                    and my topic was english.
+                </p>
+            </div>
+
+            <div class="box">
+                <img src="experience.jpg" alt="">
+                <h2 class="h-secondary">Experience</h1>
+                <p class="center">Talking about experience I am doing job at google from 3 years as
+                    a Front End Developer in the website maintaining team.
+                </p>
+            </div>
+
+            <div class="box">
+                <img src="communication.jpg" alt="">
+                <h2 class="h-secondary">Communication</h1>
+                <p class="center">Want the user to understand about your products, than you are
+                    at the place. I can make person understand about your product very frequently and that
+                    makes me the person you want. So Contact me at the Contact Section Now!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1>About Me</h1>
+        <h2>I provide <u><b>VALUE</b></u> for <u><b>MONEY</b></u> by creating
+             beautiful websites for Users</h2>
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.myOnlineMeal.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+</html>
